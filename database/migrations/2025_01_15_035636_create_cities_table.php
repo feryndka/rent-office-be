@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('photo');
             $table->string('slug')->unique();
-            $table->softDeletes();
+            $table->softDeletes(); // Agar data tidak terhapus secara permanent
             $table->timestamps();
         });
     }

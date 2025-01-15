@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('office_space_id')->constrained()->cascadeOnDelete();
-            $table->softDeletes();
+            $table->softDeletes(); // Agar data tidak terhapus secara permanent
             $table->timestamps();
         });
     }

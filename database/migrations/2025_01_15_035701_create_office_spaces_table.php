@@ -23,7 +23,7 @@ return new class extends Migration
             $table->text('about');
             $table->foreignId('city_id')->constrained()->cascadeOnDelete();
             $table->string('slug')->unique();
-            $table->softDeletes();
+            $table->softDeletes(); // Agar data tidak terhapus secara permanent
             $table->timestamps();
         });
     }

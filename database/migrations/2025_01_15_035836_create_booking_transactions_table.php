@@ -22,7 +22,7 @@ return new class extends Migration
             $table->unsignedInteger('duration');
             $table->date('ended_at');
             $table->foreignId('office_space_id')->constrained()->cascadeOnDelete();
-            $table->softDeletes();
+            $table->softDeletes(); // Agar data tidak terhapus secara permanent
             $table->timestamps();
         });
     }

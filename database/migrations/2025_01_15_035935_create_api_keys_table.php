@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('key')->unique();
-            $table->softDeletes();
+            $table->softDeletes(); // Agar data tidak terhapus secara permanent
             $table->timestamps();
         });
     }
