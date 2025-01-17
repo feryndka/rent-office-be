@@ -19,30 +19,34 @@ class CityResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-globe-asia-australia';
 
+    // Untuk membuat form input pada data city, digunakan saat create dan edit
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('name') // Form tipe text
                     ->helperText('Gunakan nama kota secara tepat.')
                     ->required()
                     ->maxLength(255),
 
-                Forms\Components\FileUpload::make('photo')
-                    ->image()
+                Forms\Components\FileUpload::make('photo') // Form tipe file upload
+                    ->image() // Form adalah berbentuk gambar
                     ->required(),
             ]);
     }
 
+    // Untuk tampilan data (View)
     public static function table(Table $table): Table
     {
         return $table
+            // Isi data pada table city dan sesuai yang sudah dibuat pada form sebelumnya
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
 
                 Tables\Columns\ImageColumn::make('photo'),
             ])
+            // Untuk filtering data
             ->filters([
                 //
             ])
