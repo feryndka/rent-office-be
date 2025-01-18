@@ -93,3 +93,13 @@ php artisan make:controller Api/BookingTransactionController
 ```
 
 Setting route API in `routes/api.php`
+
+Install Middleware for API Key:
+``` bash
+php artisan make:middleware CheckApiKey
+```
+
+Setting Middleware:
+- `routes\api.php`
+- `bootstrap\app.php`
+- `app\Http\Middleware\CheckApiKey.php`
