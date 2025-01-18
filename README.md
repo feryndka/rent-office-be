@@ -67,3 +67,16 @@ Additional Models
 - `OfficeSpacePhoto`: Manage photos for each office space.
 - `OfficeSpaceBenefit`: Attach benefits like WiFi, parking, and more to office spaces.
 - `ApiKey`: Secure integration with external API.
+###
+**7. Setting APIs End Point**
+
+Use the following commands to install Resource Laravel for API:
+``` bash
+php artisan make:resource Api/CityResource
+php artisan make:resource Api/OfficeSpaceResource
+php artisan make:resource Api/OfficeSpacePhotoResource
+php artisan make:resource Api/OfficeSpaceBenefitResource
+php artisan make:resource Api/BookingTransactionResource
+php artisan make:resource Api/ViewBookingResource
+```
+
