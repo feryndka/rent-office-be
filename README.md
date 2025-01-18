@@ -80,3 +80,16 @@ php artisan make:resource Api/BookingTransactionResource
 php artisan make:resource Api/ViewBookingResource
 ```
 
+Install API:
+``` bash
+php artisan install:api
+```
+
+Install Controller API:
+``` bash
+php artisan make:controller Api/CityController
+php artisan make:controller Api/OfficeSpaceController
+php artisan make:controller Api/BookingTransactionController
+```
+
+Setting route API in `routes/api.php`
